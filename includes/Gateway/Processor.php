@@ -10,7 +10,7 @@
 
 namespace MCoder\EPS\Gateway;
 
-if ( ! defined( ABSPATH ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 

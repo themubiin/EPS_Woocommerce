@@ -11,7 +11,7 @@
 
 namespace MCoder\EPS\Admin;
 
-if ( ! defined( ABSPATH ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 

@@ -9,7 +9,7 @@
 
 namespace MCoder\EPS\API;
 
-if ( ! defined( ABSPATH ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 

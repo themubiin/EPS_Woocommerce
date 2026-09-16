@@ -1,7 +1,7 @@
 <?php
 namespace MCoder\EPS\Frontend;
 
-if ( ! defined( ABSPATH ) ) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
