@@ -22,7 +22,7 @@ class EPS extends \WC_Payment_Gateway {
     public function __construct() {
         $this->id                 = 'eps';
         $this->has_fields         = false;
-        $this->method_title       = __('eps', 'eps');
+        $this->method_title       = __('EPS', 'eps');
         $this->method_description = __('Payment Automation is Easier, Faster and more Secured via EPS.', 'eps');
         $this->title              = __('Visa/Mastercard/MFS', 'eps');
         $this->icon               = defined('EPS_ASSETS') ? EPS_ASSETS . '/images/EPS_logo.png' : 'https://eps.com.bd/images/logo.png';
