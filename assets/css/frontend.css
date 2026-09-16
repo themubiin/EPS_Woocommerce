@@ -1,0 +1,117 @@
+/* EPS Checkout Redirection Overlay & Animation */
+.eps-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.eps-loading-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 36px 32px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: epsModalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes epsModalPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.eps-logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eps-pulse-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    animation: epsPulse 2s ease-in-out infinite;
+}
+
+@keyframes epsPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 4px 6px rgba(37, 99, 235, 0.1));
+    }
+    50% {
+        transform: scale(1.06);
+        filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.25));
+    }
+}
+
+.eps-spinner-circle {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 20px auto;
+    border: 3.5px solid #e2e8f0;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: epsSpin 0.9s linear infinite;
+}
+
+@keyframes epsSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.eps-loading-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+}
+
+.eps-loading-desc {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.eps-secure-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* EPS Checkout Payment Box Banner */
+.wc-block-components-radio-control-accordion-content img[alt="EPS Banner"],
+.payment_method_eps .payment_box img,
+.woocommerce-checkout #payment .payment_method_eps img {
+    max-width: 480px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 8px 0 !important;
+}
